@@ -735,9 +735,9 @@ const App = () => {
                 </div>
             </main>
 
-            <footer>
+            {/* <footer>
                 <div className="max-width">ϞϞ(๑⚈ ․̫ ⚈๑)∩</div>
-            </footer>
+            </footer> */}
         </div>
     );
 };
