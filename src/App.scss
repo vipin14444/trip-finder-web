@@ -1,0 +1,484 @@
+/* VARIABLES */
+
+$border: rgb(228, 228, 228);
+$blue: #36c;
+$orange: #f77728;
+
+/* COMMON STYLES */
+
+.flex {
+    display: flex;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.align {
+    align-items: center;
+}
+
+.justify {
+    justify-content: center;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.max-width {
+    max-width: 1120px;
+    margin: 0 auto;
+
+    @media screen and (max-width: 1120px) {
+        padding-inline: 1rem !important;
+    }
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+input[type="text"],
+select {
+    border: 1px solid $border;
+    height: 32px;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+}
+
+button {
+    background-color: $blue;
+    border: none;
+    border-radius: 4px;
+    height: 32px;
+    padding: 0.25rem 1rem;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+
+    &:active {
+        opacity: 0.9;
+    }
+}
+
+/* CUSTOM STYLES */
+
+.app-container {
+}
+
+header {
+    border-bottom: 1px solid $border;
+
+    .max-width {
+        padding: 1rem 0;
+    }
+
+    ul {
+        gap: 1.5rem;
+        color: gray;
+
+        li.active {
+            color: $blue;
+        }
+    }
+
+    .row-1 {
+        font-size: 0.8rem;
+
+        svg {
+            font-size: 1rem;
+        }
+
+        .help-links {
+            margin-left: auto;
+
+            li {
+                display: flex;
+                gap: 0.5rem;
+            }
+        }
+    }
+
+    .row-2 {
+        gap: 0.5rem;
+        margin-top: 1.95rem;
+    }
+}
+
+main {
+    .main-container {
+        gap: 1rem;
+
+        .left {
+            max-width: calc(250px - 1rem);
+            min-width: calc(250px - 1rem);
+            width: calc(250px - 1rem);
+            font-size: 0.9rem;
+            padding-top: 1rem;
+
+            .fare-alert-container {
+                gap: 0.5rem;
+                font-size: 0.9rem;
+                font-weight: 600;
+                border-bottom: 1px solid $border;
+                padding-bottom: 1rem;
+
+                .fare-icon-container {
+                    min-width: 60px;
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 4px;
+                    background-color: rgb(231, 239, 246);
+
+                    .fare-icon-wrapper {
+                        background-color: rgb(52, 51, 51);
+                        color: white;
+                        width: 36px;
+                        height: 36px;
+                        border-radius: 50%;
+                        font-size: 1.5rem;
+                    }
+                }
+
+                .fare-meta {
+                    a {
+                        margin-top: auto;
+                        color: $blue;
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+
+            .flight-count {
+                margin: 1rem 0;
+                span {
+                    font-weight: 700;
+                }
+            }
+
+            .accordian {
+                padding-top: 1rem;
+
+                .acc-header {
+                    font-weight: 600;
+                    justify-content: space-between;
+                    margin-bottom: 1rem;
+                }
+
+                .acc-body {
+                    .cb-group {
+                        gap: 0.5rem;
+                        padding: 7px 3px;
+                        margin-left: -3px;
+
+                        label {
+                            flex: 1;
+                            font-size: 0.75rem;
+                            display: flex;
+                            justify-content: space-between;
+                            user-select: none;
+                            cursor: pointer;
+
+                            span {
+                                color: gray;
+                            }
+                        }
+
+                        &:hover {
+                            cursor: pointer;
+                            background-color: rgb(245, 245, 245);
+                        }
+                    }
+
+                    .cb-group + .cb-group {
+                        // margin-top: 0.5rem;
+                    }
+                }
+            }
+
+            .accordian + .accordian {
+                padding-top: 2rem;
+            }
+
+            .price-range-container {
+                font-size: 0.8rem;
+
+                input {
+                    width: 100%;
+                    margin: 0.5rem 0;
+                }
+
+                .min-max {
+                    color: gray;
+                    justify-content: space-between;
+                }
+            }
+        }
+
+        .right {
+            flex: 1;
+            position: relative;
+            min-width: 740px;
+
+            .offer-container {
+                padding-top: 1rem;
+                margin-bottom: 1rem;
+                position: sticky;
+                top: 0;
+                background-color: white;
+
+                .offer + .offer {
+                    margin-top: 5px;
+                }
+
+                .offer {
+                    width: 100%;
+                    background-color: #fef4cc;
+                    padding: 1rem;
+                    border-radius: 4px;
+                    font-size: 0.9rem;
+
+                    .badge {
+                        background-color: #fca402;
+                        color: white;
+                        font-size: 0.65rem;
+                        font-weight: 700;
+                        border-radius: 10rem;
+                        padding: 3px 10px;
+                        margin-right: 1rem;
+                    }
+
+                    a {
+                        margin-left: 1rem;
+                        color: $blue;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+
+            .search-results-container {
+                .search-date-changer-wrapper {
+                    padding: 0 0.5rem;
+                    .search-date-changer {
+                        font-size: 0.75rem;
+                        color: gray;
+                        align-items: stretch;
+
+                        .date-container {
+                            flex: 1;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            gap: 0.3rem;
+                            padding: 0.5rem;
+                            border-bottom: 1px solid $border;
+
+                            .date-changer-best-price {
+                                font-weight: 600;
+                            }
+
+                            &.active {
+                                color: $blue;
+                                border-bottom: 2px solid $blue;
+                            }
+                        }
+                        .chevron-wrapper {
+                            font-size: 1.2rem;
+                            border-bottom: 1px solid $border;
+                            display: grid;
+                            place-content: center;
+                        }
+                    }
+                }
+
+                .list-header-wrapper {
+                    position: sticky;
+                    top: 125px;
+                    padding-top: 1rem;
+                    padding-bottom: 0.5rem;
+                    margin-bottom: 0.5rem;
+                    background-color: white;
+                    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+                }
+
+                .list-header-container {
+                    padding: 0.5rem 1rem;
+                    background-color: #f7f7f7;
+                    font-size: 0.75rem;
+
+                    .airline-header {
+                        min-width: 130px;
+                        width: 130px;
+                    }
+                    .departure-header {
+                        min-width: 150px;
+                        width: 150px;
+                    }
+                    .arrival-header {
+                        min-width: 145px;
+                        width: 145px;
+                    }
+                    .duration-header {
+                        min-width: 80px;
+                        width: 80px;
+                    }
+                    .price-header {
+                        min-width: 80px;
+                        width: 80px;
+                        margin-left: auto;
+                        text-align: end;
+                    }
+                    .actions-header {
+                        min-width: 100px;
+                        width: 100px;
+                    }
+                }
+
+                ul {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.5rem;
+                }
+
+                li {
+                    border: 1px solid $border;
+                    border-radius: 4px;
+                    padding: 0 1rem;
+                    font-size: 0.9rem;
+
+                    .item-info {
+                        padding: 1rem 0;
+
+                        .airline-section {
+                            padding-top: 2px;
+                            height: fit-content;
+                            min-width: 130px;
+                            width: 130px;
+
+                            .airline-images {
+                                gap: 10px;
+                                img {
+                                    min-width: 28px;
+                                    width: 28px;
+                                    height: 28px;
+                                }
+                            }
+
+                            span {
+                                font-size: 0.75rem;
+                            }
+                        }
+
+                        .departure-section {
+                            padding-top: 2px;
+                            height: fit-content;
+                            min-width: 150px;
+                            min-height: 48px;
+                            flex-direction: column;
+
+                            .departure-time {
+                                font-size: 1.2rem;
+                            }
+
+                            .route-container {
+                                font-size: 0.75rem;
+                                margin-top: auto;
+                                gap: 3px;
+                            }
+                        }
+
+                        .arrival-section {
+                            padding-top: 2px;
+                            height: fit-content;
+                            min-width: 145px;
+                            width: 145px;
+                            font-size: 1.2rem;
+                            min-height: 48px;
+                        }
+
+                        .duration-section {
+                            padding-top: 2px;
+                            height: fit-content;
+                            min-width: 80px;
+                            width: 80px;
+                            font-size: 1.2rem;
+                            min-height: 48px;
+                            flex-direction: column;
+
+                            .stop-count {
+                                margin-top: auto;
+                                font-size: 0.75rem;
+                            }
+                        }
+
+                        .price-section {
+                            padding-top: 2px;
+                            height: fit-content;
+                            min-width: 100px;
+                            width: 100px;
+                            font-size: 1.2rem;
+                            min-height: 48px;
+                            margin-left: auto;
+                            font-weight: 700;
+                            text-align: end;
+                        }
+
+                        .actions-section {
+                            height: fit-content;
+                            min-width: 100px;
+                            width: 100px;
+                            min-height: 48px;
+                            justify-content: flex-end;
+
+                            button {
+                                background-color: $orange;
+                            }
+                        }
+                    }
+
+                    .item-footer {
+                        border-top: 1px solid whitesmoke;
+                        padding: 6px 0;
+                        font-size: 0.75rem;
+
+                        .flight-details-link {
+                            width: 130px;
+                            min-width: 130px;
+                            color: $blue;
+                        }
+
+                        svg {
+                            font-size: 1.1rem;
+                            color: gray;
+                        }
+
+                        .see-more-options-link {
+                            margin-left: auto;
+                            color: $blue;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer {
+    border-top: 1px solid $border;
+    margin-top: 2rem;
+    padding: 2rem;
+    text-align: center;
+}
