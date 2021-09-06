@@ -324,8 +324,8 @@ const App = () => {
                                 </div>
                             </div>
                             <div className="fare-meta flex column">
-                                <span>Get fare updates via email</span>
-                                <a href="#">Set a fare alert</a>
+                                <span>Get updates via email</span>
+                                <a href="#">Set an alert</a>
                             </div>
                         </div>
 
