@@ -347,6 +347,14 @@ const App = () => {
                                         name="cb1"
                                         id="cb1"
                                     />
+                                    <label htmlFor="cb1">1 stop</label>
+                                </div>
+                                <div className="cb-group flex align">
+                                    <input
+                                        type="checkbox"
+                                        name="cb1"
+                                        id="cb1"
+                                    />
                                     <label htmlFor="cb1">2 stops</label>
                                 </div>
                             </div>
@@ -420,7 +428,7 @@ const App = () => {
 
                         <div className="accordian">
                             <div className="acc-header flex align">
-                                <div className="acc-title">One-way price</div>
+                                <div className="acc-title">All In Freight</div>
                                 <div className="acc-actions flex align">
                                     <FiChevronUp />
                                 </div>
