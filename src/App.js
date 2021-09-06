@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from "react";
+import React, { useState } from "react";
 import "./App.scss";
 import { FaUserCircle } from "react-icons/fa";
 import { MdHeadsetMic, MdNotificationsActive } from "react-icons/md";
@@ -12,6 +12,8 @@ import {
 } from "react-icons/fi";
 import logo from "./assets/logo.jpeg";
 import appLogo from "./assets/app-logo.png";
+import InputRange from "react-input-range";
+import "react-input-range/lib/css/index.css";
 
 const App = () => {
     const results = [
@@ -245,6 +247,9 @@ const App = () => {
         },
     ];
 
+    // const [slider, setSlider] = useState(31407);
+    const [slider, setSlider] = useState(50000);
+
     return (
         <div className="app-container">
             <header>
@@ -434,15 +439,167 @@ const App = () => {
                                 </div>
                             </div>
                             <div className="acc-body price-range-container">
-                                <div className="price">Up to ₹51,214</div>
-                                <input
-                                    type="range"
-                                    name="priceRange"
-                                    id="priceRange"
+                                <div className="price">Up to ₹{slider}</div>
+
+                                <InputRange
+                                    maxValue={304219}
+                                    minValue={31407}
+                                    classNames={{
+                                        minLabel: "range-min-label",
+                                        maxLabel: "range-max-label",
+                                        activeTrack: "range-active-track",
+                                        inputRange: "range-input-range",
+                                        labelContainer: "range-label-container",
+                                        slider: "range-slider",
+                                        sliderContainer:
+                                            "range-slider-container",
+                                        track: "range-track",
+                                        valueLabel: "range-value-label",
+                                    }}
+                                    value={slider}
+                                    onChange={(value) => setSlider(value)}
                                 />
+
                                 <div className="min-max flex align">
                                     <div className="min">₹31,407</div>
                                     <div className="max">₹3,04,219</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="accordian">
+                            <div className="acc-header flex align">
+                                <div className="acc-title">
+                                    Special Handling Code
+                                </div>
+                                <div className="acc-actions flex align">
+                                    <FiChevronUp />
+                                </div>
+                            </div>
+                            <div className="acc-body">
+                                <div className="cb-group flex align">
+                                    <input
+                                        type="checkbox"
+                                        name="cb13"
+                                        id="cb13"
+                                    />
+                                    <label htmlFor="cb13">
+                                        LIFE TROPICAL FISH
+                                    </label>
+                                </div>
+                                <div className="cb-group flex align">
+                                    <input
+                                        type="checkbox"
+                                        name="cb14"
+                                        id="cb14"
+                                    />
+                                    <label htmlFor="cb14">LIVE CHCIKEN</label>
+                                </div>
+                                <div className="cb-group flex align">
+                                    <input
+                                        type="checkbox"
+                                        name="cb15"
+                                        id="cb15"
+                                    />
+                                    <label htmlFor="cb15">
+                                        SPORTING WEAPONS
+                                    </label>
+                                </div>
+                                <div className="cb-group flex align">
+                                    <input
+                                        type="checkbox"
+                                        name="cb16"
+                                        id="cb16"
+                                    />
+                                    <label htmlFor="cb16">
+                                        SAVE HUMAN LIFE
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="accordian">
+                            <div className="acc-header flex align">
+                                <div className="acc-title">Product</div>
+                                <div className="acc-actions flex align">
+                                    <FiChevronUp />
+                                </div>
+                            </div>
+                            <div className="acc-body">
+                                <div className="cb-group flex align">
+                                    <input
+                                        type="checkbox"
+                                        name="cb17"
+                                        id="cb17"
+                                    />
+                                    <label htmlFor="cb17">GENERAL</label>
+                                </div>
+                                <div className="cb-group flex align">
+                                    <input
+                                        type="checkbox"
+                                        name="cb18"
+                                        id="cb18"
+                                    />
+                                    <label htmlFor="cb18">GO PREMIUM</label>
+                                </div>
+                                <div className="cb-group flex align">
+                                    <input
+                                        type="checkbox"
+                                        name="cb19"
+                                        id="cb19"
+                                    />
+                                    <label htmlFor="cb19">GO BAGGAGE</label>
+                                </div>
+                                <div className="cb-group flex align">
+                                    <input
+                                        type="checkbox"
+                                        name="cb20"
+                                        id="cb20"
+                                    />
+                                    <label htmlFor="cb20">CITY TO PORT</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="accordian">
+                            <div className="acc-header flex align">
+                                <div className="acc-title">Commodities</div>
+                                <div className="acc-actions flex align">
+                                    <FiChevronUp />
+                                </div>
+                            </div>
+                            <div className="acc-body">
+                                <div className="cb-group flex align">
+                                    <input
+                                        type="checkbox"
+                                        name="cb21"
+                                        id="cb21"
+                                    />
+                                    <label htmlFor="cb21">GENERAL</label>
+                                </div>
+                                <div className="cb-group flex align">
+                                    <input
+                                        type="checkbox"
+                                        name="cb22"
+                                        id="cb22"
+                                    />
+                                    <label htmlFor="cb22">FRESH FRUIT</label>
+                                </div>
+                                <div className="cb-group flex align">
+                                    <input
+                                        type="checkbox"
+                                        name="cb23"
+                                        id="cb23"
+                                    />
+                                    <label htmlFor="cb23">PASSPORT/VISA</label>
+                                </div>
+                                <div className="cb-group flex align">
+                                    <input
+                                        type="checkbox"
+                                        name="cb24"
+                                        id="cb24"
+                                    />
+                                    <label htmlFor="cb24">
+                                        LONG DIMENSION ITEM
+                                    </label>
                                 </div>
                             </div>
                         </div>

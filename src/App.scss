@@ -72,6 +72,37 @@ button {
     }
 }
 
+.range-input-range {
+    background-color: coral;
+    position: relative;
+    margin: 1rem 0;
+}
+
+.range-track {
+    height: 3px;
+    background-color: #d9d9d9;
+}
+
+.range-active-track {
+    background-color: $blue;
+    height: 3px;
+}
+
+.range-slider {
+    width: 15px;
+    height: 15px;
+    background: $blue;
+    border-radius: 50%;
+    margin-left: -7px;
+    margin-top: -9px;
+}
+
+.range-value-label,
+.range-min-label,
+.range-max-label {
+    display: none;
+}
+
 /* CUSTOM STYLES */
 
 .app-container {
