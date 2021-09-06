@@ -11,6 +11,7 @@ import {
     FiChevronLeft,
     FiChevronRight,
 } from "react-icons/fi";
+import { ReactComponent as Logo } from "./assets/logo.svg";
 
 const App = () => {
     const results = [
@@ -249,6 +250,10 @@ const App = () => {
             <header>
                 <div className="max-width">
                     <div className="flex align row-1">
+                        <div className="logo-container">
+                            <Logo />
+                        </div>
+
                         <ul className="flex ali className='flex align'gn nav-li className='flex align'nks">
                             <li className="flex align active">
                                 <FaPlane />

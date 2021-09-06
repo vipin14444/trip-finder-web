@@ -95,6 +95,19 @@ header {
     .row-1 {
         font-size: 0.8rem;
 
+        .logo-container {
+            background-color: rebeccapurple;
+            padding: 5px 10px;
+            border-radius: 4px;
+            display: grid;
+            place-content: center;
+            margin-right: 1.5rem;
+
+            svg {
+                width: 100px;
+            }
+        }
+
         svg {
             font-size: 1rem;
         }
