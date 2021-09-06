@@ -1,8 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import "./App.scss";
-import { FaBed, FaWalking, FaPlane, FaUserCircle } from "react-icons/fa";
-import { IoMdTrain } from "react-icons/io";
+import { FaUserCircle } from "react-icons/fa";
 import { MdHeadsetMic, MdNotificationsActive } from "react-icons/md";
 import { HiOutlineSwitchHorizontal } from "react-icons/hi";
 import {
@@ -11,7 +10,8 @@ import {
     FiChevronLeft,
     FiChevronRight,
 } from "react-icons/fi";
-import { ReactComponent as Logo } from "./assets/logo.svg";
+import logo from "./assets/logo.jpeg";
+import appLogo from "./assets/app-logo.png";
 
 const App = () => {
     const results = [
@@ -251,21 +251,16 @@ const App = () => {
                 <div className="max-width">
                     <div className="flex align row-1">
                         <div className="logo-container">
-                            <Logo />
+                            <img src={logo} alt={"logo"} />
                         </div>
 
                         <ul className="flex ali className='flex align'gn nav-li className='flex align'nks">
                             <li className="flex align active">
-                                <FaPlane />
-                            </li>
-                            <li className="flex align">
-                                <FaBed />
-                            </li>
-                            <li className="flex align">
-                                <IoMdTrain />
-                            </li>
-                            <li className="flex align">
-                                <FaWalking />
+                                <img
+                                    className="app-logo"
+                                    src={appLogo}
+                                    alt="app-logo"
+                                />
                             </li>
                         </ul>
 
@@ -275,16 +270,16 @@ const App = () => {
                                 <MdHeadsetMic /> Support
                             </li>
                             <li className="flex align">
-                                <FaUserCircle /> Your Trips
+                                <FaUserCircle /> Your Shipments
                             </li>
                         </ul>
                     </div>
                     <div className="flex align row-2">
                         <div className="form-group">
                             <select name="tripType" id="tripType">
-                                <option value="OneWay">One Way</option>
-                                <option value="RoundTrip">Round Trip</option>
-                                <option value="MultiCity">Multi City</option>
+                                <option value="NS">Non-stop</option>
+                                <option value="ML">Multi-Leg</option>
+                                <option value="CO">Connecting</option>
                             </select>
                         </div>
                         <div className="form-group">
@@ -307,16 +302,10 @@ const App = () => {
                             </select>
                         </div>
                         <div className="form-group">
-                            <select name="date" id="date">
-                                <option value="2021-09-10">Return</option>
-                            </select>
+                            <input type="text" value="20 Pieces" />
                         </div>
                         <div className="form-group">
-                            <select name="travellerCount" id="travellerCount">
-                                <option value="1">1 Traveller</option>
-                                <option value="2">2 Travellers</option>
-                                <option value="3">3 Travellers</option>
-                            </select>
+                            <input type="text" value="100 Kg" />
                         </div>
                         <div className="form-group">
                             <button>Search</button>
@@ -522,26 +511,6 @@ const App = () => {
                         </div>
                     </div>
                     <div className="right">
-                        <div className="offer-container">
-                            <div className="offer flex align">
-                                <div className="badge">OFFER</div>
-                                <div className="offer-text">
-                                    Get up to Rs. 3000 instant discount on HDFC
-                                    Credit Cards. Use coupon: CTHDFC2021
-                                    <a href="#">Know more</a>
-                                </div>
-                            </div>
-                            <div className="offer flex align">
-                                <div className="badge">OFFER</div>
-                                <div className="offer-text">
-                                    Get a flat 5% instant discount upto Rs.
-                                    10,000/- on International Flights. Use
-                                    coupon: INTL10K
-                                    <a href="#">Know more</a>
-                                </div>
-                            </div>
-                        </div>
-
                         <div className="search-results-container">
                             <div className="search-date-changer-wrapper">
                                 <div className="flex search-date-changer">
